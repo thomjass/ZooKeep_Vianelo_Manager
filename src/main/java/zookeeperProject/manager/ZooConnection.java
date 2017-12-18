@@ -17,10 +17,10 @@ import org.apache.zookeeper.ZooKeeper;
 public class ZooConnection {
 		public static ZooKeeper zoo;
 	   final CountDownLatch connectedSignal = new CountDownLatch(1);
-	   public WatcherMaster watcherMaster = new WatcherMaster();
+
 	   // Method to connect zookeeper ensemble.
 	   public ZooKeeper connect(String host) throws IOException,InterruptedException {	
-	      zoo = new ZooKeeper(host,5000,watcherMaster);
+	      zoo = new ZooKeeper(host,5000,new WatcherConn());
 	      return zoo;
 	   }
 		

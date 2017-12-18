@@ -20,14 +20,7 @@ public class WatcherMaster implements Watcher {
 	List<String> listChildren;
 
 	public void process(WatchedEvent event) {
-		/*
-		try {
-			TimeUnit.MILLISECONDS.sleep(300);
-		} catch (InterruptedException e3) {
-			// TODO Auto-generated catch block
-			e3.printStackTrace();
-		}
-		*/
+
 		if (event.getType() == Event.EventType.None) {
             // We are are being told that the state of the
             // connection has changed
