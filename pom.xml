@@ -41,9 +41,6 @@
           <programs>
             <program>
               <mainClass>zookeeperProject.manager.Manager</mainClass>
-              <commandLineArguments>
-                <commandLineArgument>url_kafka</commandLineArgument>
-              </commandLineArguments>
               <id>manager</id>
             </program>
           </programs>
