@@ -18,7 +18,7 @@ public class Manager
     {
 
 		try {
-			zk = connection.connect("localhost");
+			zk = connection.connect(args[0]);
 			try {
 				WatcherConn.connectionLatch.await(10, TimeUnit.SECONDS);
 			} catch (InterruptedException e) {
